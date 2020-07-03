@@ -1,0 +1,54 @@
+body{
+	background: url("https://live.staticflickr.com/7287/16437036206_cc0e06db12_b.jpg");
+	margin: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: auto; 
+}
+.login-box{
+	text-align: center;
+	margin-top: 100px;
+
+}
+.heading{
+	font-size: 40px;
+	font-family: sans-serif;
+	color: darkslategray;
+	border-bottom: 3px solid green;
+	padding: 6px;
+	margin:0px 590px 0px 570px; 
+	float: left;
+}
+.forms input{
+	border: none;
+	outline: none;
+	background: none;
+	margin-top: 30px;
+	border-bottom: 1px solid green;
+	padding: 2px;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.btn{
+	margin-top: 35px;
+}
+.btn input{
+	border: none;
+	outline: none;
+	background-color: green;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: sans-serif;
+	font-size: 20px; 
+	border-radius: 7px;
+}
+.btn input:hover{
+	background-color: darkgreen;
+	transform: scale(1.1);
+	transition-delay: 0.2s;
+	transition-duration: 0.3s;
+}

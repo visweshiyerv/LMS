@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+        <script type="text/javascript">
+            function loadXMLDoc()
+            {
+                var xmlhttp;
+                var k=document.getElementById("name").value;
+                var urls="checkusername.jsp?ver="+k;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4)
+                    {
+                        document.getElementById("err").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET",urls,true);
+                xmlhttp.send();
+            }
+
+            function validate(){
+                var username = document.getElementById("name").value;
+                var password = document.getElementById("password").value;
+                if(username == "" || password == ""){
+                    alert("No blank field is allowed");
+                    return false;
+                }
+                else if(password.length < 6){
+                    alert("Password must be atleast 6 characters long");
+                    return false;
+                }
+            }
+        </script>
+        <style>
+            .faculty{
+                margin-top: 15px;
+                color: black;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-box">
+        <div class="heading">
+            <h1><strong>Login</strong></h1>
+        </div>
+        <form action="Login" method="post">
+            <div class="forms">
+               <input id="name" type="text" placeholder="Username or Email" name="uname" onkeyup="loadXMLDoc()">
+               <span id="err"></span>
+            </div>
+            <div class="forms">
+                <input id="password" type="password" placeholder="Password" name="psw">
+            </div>
+            <p class="faculty">If you are a faculty <a href="staffsignup.html">Login here</a></p>
+            <div class="btn">
+                <a href="">
+                    <input type="submit" value="Sign In" onclick="validate()"></a>
+            </div>
+            </div>
+        </form>           
+    </body>
+</html>
+
+
+
+
+
+
+

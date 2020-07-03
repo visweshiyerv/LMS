@@ -1,0 +1,60 @@
+body{
+	overflow-x: hidden;
+}
+.bg{
+	background: url("https://www.noticebard.com/wp-content/uploads/2019/07/ssn-college.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 0px;
+	padding-top: 0px;
+	height: 580px;
+}
+.dropdown{
+    padding-top: 13px;
+    color: white;
+    padding-right: 5px;
+}
+.loogo{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: none;
+}
+.jumbotron{
+ 	background: grey;
+    text-shadow: black 0.2em 0.2em 0.2em;
+    border: 0.5px;
+    text-shadow: black 0.2em 0.2em 0.2em;
+    text-align: center;
+    color: white;
+}
+.row{
+	margin-top: 30px;
+}
+.text{
+	margin-top: 30px;
+	text-shadow: black 0.2em 0.2em 0.2em;
+	text-shadow: black 0.2em 0.2em 0.2em;
+	text-align: center;
+}
+.fade-in{
+    animation: fadeIn 3s;
+    }
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            }
+        to{
+            opacity: 1;
+            }
+        }
+
+#footer{
+    margin-top: 50px;
+    padding-top: 5px;
+    border:0.5px solid black;
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+    clear:both;
+}
